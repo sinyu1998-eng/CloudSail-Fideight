@@ -70,3 +70,34 @@ footer.site a { color:var(--gold); }
 footer { background:var(--deep); color:#9c93c4; text-align:center; padding:26px 6vw; font-size:13px; margin-top:40px; }
 footer a { color:var(--gold); }
 code { background:var(--ice); padding:2px 7px; border-radius:6px; font-size:13px; color:var(--purple); }
+.langswitch { background:rgba(255,255,255,.14); border:1.5px solid rgba(255,255,255,.45); border-radius:20px; padding:5px 14px !important; color:#fff !important; font-weight:700; cursor:pointer; }
+.langswitch:hover { background:rgba(255,255,255,.28) !important; }
+/* h1 与紧跟的英文副标题：EN 模式下 h1 承载英文（保持大标题样式），herosub 承载中文（保持副标题样式） */
+.hero h1, .hero .herosub { line-height:1.25; }
+body.lang-en .hero .herosub {
+  font-size:clamp(16px,2.2vw,20px) !important; font-weight:600 !important;
+  color:var(--gold) !important; font-style:normal !important; margin-top:10px;
+}
+/* EN 模式下段落内的中文副标题另起一行，避免与英文挤在同一行 */
+body.lang-en p .en.i18n-sub-cn, body.lang-en h2 .en.i18n-sub-cn,
+body.lang-en h3 .en.i18n-sub-cn, body.lang-en h1 .en.i18n-sub-cn { display:block; margin-top:8px; }
+body.lang-en p .en.i18n-sub-cn { font-size:13px; opacity:.85; }
+/* 首页品牌名：h1 永远是 "Fideight"，不做语言互换（品牌不翻译） */
+body.lang-en .hero h1.brand { font-size:clamp(40px,6vw,64px) !important; }
+body.lang-en .hero .brandsub {
+  font-size:clamp(17px,2.2vw,22px) !important; font-weight:600 !important;
+  color:var(--gold) !important; font-style:normal !important; margin-top:10px;
+}
+/* 公告中文全文：EN 模式下隐藏（英文段落已完整表达同一内容，避免白色残影） */
+body.lang-en .cn-only { display:none !important; }
+/* EN 模式下副标题变中文，保持深色可读（浅底容器内不能是白字） */
+body.lang-en .en { color:var(--muted) !important; }
+body.lang-en .hero .en { color:var(--gold) !important; }
+body.lang-en .card .en { color:var(--muted) !important; }
+/* .callout / .warn 等浅底容器里的中文副标题 */
+body.lang-en .callout .en, body.lang-en .warn .en, body.lang-en .step .en, body.lang-en .layer .en { color:#6b5f52 !important; }
+body.lang-en h1 + .en { color:var(--gold) !important; }
+/* 新闻公告首行：EN 模式下把中文前缀压成小字副标题，避免白字压浅底 */
+body.lang-en .newscallout > b:first-child {
+  display:block; font-size:12.5px; font-weight:400; color:#8a7c66 !important; margin-bottom:6px;
+}
