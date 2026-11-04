@@ -4,8 +4,10 @@ CloudSail × Fideight · Render 入口
 本地测试：uvicorn app:app --reload
 """
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
+from pathlib import Path
+
+ROOT = Path(".").resolve()
 
 app = FastAPI(title="CloudSail × Fideight", version="1.0.0")
 
@@ -36,9 +38,14 @@ def compliance_check(country: str, product: str):
     return {"country": country, "product": product,
             "decision": "BLOCKED" if hit else "PASS"}
 
-# ---------- 静态站（本目录下的 html/assets） ----------
-app.mount("/static", StaticFiles(directory="."), name="static")
-
+# ---------- 静态站：根路径落产品页，其余按文件回退（支持所有相对链接） ----------
 @app.get("/")
 def index():
     return FileResponse("product.html")
+
+@app.get("/{path:path}")
+def static_files(path: str):
+    target = (ROOT / path).resolve()
+    if target.is_file() and str(target).startswith(str(ROOT)):
+        return FileResponse(target)
+    return FileResponse(ROOT / "product.html")
