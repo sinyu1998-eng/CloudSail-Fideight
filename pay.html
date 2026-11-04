@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>收款与充值 Payments & Top-up · Fideight × CloudSail</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="ossbar">🌟 本项目已开源 Open-sourced · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub 仓库 Repository</a> · 点 Star 让更多人看到我们的前景 <span class="en">— star us to spread the vision</span> →</div>
+<header class="site">
+  <a class="logo" href="index.html">Fideight<b>·</b>CloudSail</a>
+  <nav>
+    <a href="index.html">首页 Home</a>
+    <a href="tech.html">技术架构 Tech</a>
+    <a href="bp.html">商业计划 BP</a>
+    <a href="competitors.html">竞品 Analysis</a>
+    <a href="prototype.html">原型 Prototype</a>
+    <a href="deck.html">路演 Roadshow</a>
+    <a class="on" href="pay.html">收款 Pay</a>
+    <a href="seed.html">种子群 Seed Group</a>
+    <a href="crowdfund.html">众筹 Crowdfund</a>
+    <a href="glasses.html">眼镜 Glasses</a>
+    <a href="contact.html">联系 Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>收款与充值</h1>
+  <div class="en">Payments & Top-up — powered by Airwallex (fiat) and milestone escrow (USDC)</div>
+  <p>双轨收款：法币走 <b>Airwallex</b>（信用卡 / 银行转账 / 本地支付方式，支持 130+ 币种与全球账户）；链上货款走 <b>里程碑托管合约</b>（USDC）。充值余额自动计入你的验货存证与托管服务额度。</p>
+  <p class="en">Dual rails: fiat via Airwallex (cards, bank transfer, local payment methods, 130+ currencies), onchain escrow in USDC. Top-ups credit your attestation & escrow service balance.</p>
+</div>
+
+<section>
+  <h2>服务充值套餐<span class="en">Top-up packages</span></h2>
+  <div class="grid g3">
+    <div class="card">
+      <h3>Seed 种子档</h3><div class="en">Seed</div>
+      <p style="font-size:26px;font-weight:800;color:var(--purple)">$99</p>
+      <p>50 次验货存证（≈$1.98/次）＋ 1 笔里程碑托管免费通道 ＋ <a href="seed.html">内测群席位</a></p>
+      <p class="en">50 attestations (~$1.98 each) + 1 escrow pass + <a href="seed.html">seed-group seat</a></p>
+      <button class="btn gold sm" onclick="pay('seed',99)">充值 Top up $99</button>
+    </div>
+    <div class="card">
+      <h3>Trader 卖家档</h3><div class="en">Trader</div>
+      <p style="font-size:26px;font-weight:800;color:var(--purple)">$499</p>
+      <p>400 次验货存证（≈$1.25/次）＋ 5 笔托管免费通道 ＋ 合规 Oracle 试用 30 天</p>
+      <p class="en">400 attestations + 5 escrow passes + 30-day compliance-oracle trial</p>
+      <button class="btn gold sm" onclick="pay('trader',499)">充值 Top up $499</button>
+    </div>
+    <div class="card">
+      <h3>Factory 工厂档</h3><div class="en">Factory</div>
+      <p style="font-size:26px;font-weight:800;color:var(--purple)">$1,999</p>
+      <p>2,000 次存证（$1/次）＋ 专属验货方配额 ＋ API 白名单 ＋ 双语对账报表</p>
+      <p class="en">2,000 attestations + dedicated inspector quota + API allowlist + bilingual reports</p>
+      <button class="btn gold sm" onclick="pay('factory',1999)">充值 Top up $1,999</button>
+    </div>
+  </div>
+  <div class="warn"><b>说明 Note：</b>托管货款本身不经过平台余额——大额货款走 MilestoneEscrow 智能合约（USDC），平台仅收取协议费 0.3–0.8%。Escrowed funds never touch the platform balance; only protocol fees apply.</div>
+</section>
+
+<section>
+  <h2>收款通道<span class="en">Payment rails</span></h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>① Airwallex（法币，推荐）</h3><div class="en">Fiat rail — cards / bank transfer / local methods</div>
+      <p>全球收款账户、130+ 币种结汇、卡组织收单、东南亚/中东本地支付方式。还没开户？用下方推荐链接注册，双方都有权益：</p>
+      <p class="en">Global accounts, 130+ currencies, card acquiring, local payment methods. Sign up via our partner link:</p>
+      <a class="btn gold" href="https://www.airwallex.com/app/signup?utm_source=agent_referral&utm_medium=partner_referral&utm_campaign=cn&utm_term=Individual%20Agent_huoban999zhq" target="_blank" rel="noopener">注册 Airwallex Sign up ↗</a>
+    </div>
+    <div class="card">
+      <h3>② 链上托管（USDC）</h3><div class="en">Onchain escrow — MilestoneEscrow.sol</div>
+      <p>买家 USDC 锁进合约；验货证据哈希上链（EAS）达标后自动放款；争议走 Kleros 仲裁。测试网已跑通。</p>
+      <p class="en">USDC locks in the contract; funds release when the evidence hash is attested; disputes go to Kleros. Live on testnet.</p>
+      <a class="btn ghost" href="prototype.html">看协议原型 View prototype</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>网站对接方案（3 步上线，ready 内容）<span class="en">Integration plan — 3 steps to production</span></h2>
+  <table class="tbl">
+    <tr><th>步骤 Step</th><th>做法 How</th><th>所需材料 Needed</th><th>工期 ETA</th></tr>
+    <tr>
+      <td><b>1 · 收款链接（最快，推荐先用）</b><br><span class="en">Payment Link</span></td>
+      <td>在 Airwallex 后台生成 3 个 Payment Link（$99 / $499 / $1,999），把本页按钮 href 换成链接即可收款；无需写代码。<br><span class="en">Create 3 Payment Links in the Airwallex dashboard and paste them into this page's buttons — no code.</span></td>
+      <td>营业执照/主体信息、法人身份证明、网站域名（KYB 审核 1–3 个工作日）<br><span class="en">Business registration docs, legal-rep ID, domain (KYB 1–3 business days)</span></td>
+      <td>今天可用<br><span class="en">Today</span></td>
+    </tr>
+    <tr>
+      <td><b>2 · Checkout API（嵌入式）</b><br><span class="en">Embedded checkout</span></td>
+      <td>调用 Airwallex Payment Acceptance API：后端 POST /pa/payment_intents → 前端用 airwallex-payment-elements 内嵌收银台；webhook 回调 /api/pay/webhook 自动给用户加余额。<br><span class="en">Payment Acceptance API + embedded elements; webhook credits the user balance automatically.</span></td>
+      <td>API Key 与 Client ID（Airwallex 后台 → 开发者）、webhook secret<br><span class="en">API key, client ID, webhook secret</span></td>
+      <td>2–3 天<br><span class="en">2–3 days</span></td>
+    </tr>
+    <tr>
+      <td><b>3 · 余额与托管打通</b><br><span class="en">Balance ↔ escrow</span></td>
+      <td>用户余额 → 抵扣存证费/协议费；链上托管放款后，Airwallex 全球账户收取 USDC 承兑商的结算（或走 OTC 提现）。<br><span class="en">Balance offsets fees; escrow releases settle to the Airwallex global account.</span></td>
+      <td>Airwallex Global Account（多币种账户）<br><span class="en">Multi-currency global account</span></td>
+      <td>1 周<br><span class="en">1 week</span></td>
+    </tr>
+  </table>
+  <div class="callout"><b>合规提示 Compliance：</b>Airwallex 收单需要企业主体（个体户或公司均可申请）；加密货币相关收款不要走 Airwallex，链上 USDC 走合约钱包，两条资金线隔离记账。<span class="en">Keep fiat acquiring (Airwallex) and onchain escrow (USDC) as separate ledgers.</span></div>
+</section>
+
+  <section>
+  <div class="callout"><b>还没有账号？先拿免费额度 Got no account yet? Start free:</b> 加入<a href="seed.html">云帆出海 · 种子用户内测群</a>，前 20 位直接送 <b>50 次免费验货存证</b>（约 $99），额度用完再决定是否充值。<br>
+  <span class="en">Join the CloudSail Global Seed User Group — the first 20 members receive 50 free attestations (~$99) before paying anything.</span>
+  <a class="btn gold sm" href="seed.html" style="margin-left:8px">免费入群 Join free →</a></div>
+  </section>
+
+  <section>
+  <h2>对接进度<span class="en">Status</span></h2>
+  <div class="grid g3">
+    <div class="card"><h3>✅ 页面就绪</h3><div class="en">Page ready</div><p>本页三档套餐与按钮已就位，替换成你的 Payment Link 即可收款。</p></div>
+    <div class="card"><h3>⏳ KYB 审核</h3><div class="en">KYB pending</div><p>用你的主体在 Airwallex 开户并提交资料（推荐链接已嵌入本页）。</p></div>
+    <div class="card"><h3>🔜 API + Webhook</h3><div class="en">API & webhook</div><p>拿到 API Key 后嵌入收银台并自动加余额（后端 /api/pay/webhook 已预留）。</p></div>
+  </div>
+</section>
+
+<script>
+const LINKS={seed:"https://www.airwallex.com/app/signup?utm_source=agent_referral&utm_medium=partner_referral&utm_campaign=cn&utm_term=Individual%20Agent_huoban999zhq",
+trader:"https://www.airwallex.com/app/signup?utm_source=agent_referral&utm_medium=partner_referral&utm_campaign=cn&utm_term=Individual%20Agent_huoban999zhq",
+factory:"https://www.airwallex.com/app/signup?utm_source=agent_referral&utm_medium=partner_referral&utm_campaign=cn&utm_term=Individual%20Agent_huoban999zhq"};
+function pay(k,amt){window.open(LINKS[k],"_blank")}
+</script>
+
+<footer>Trust, shipped. · <a href="contact.html">联系我们 Contact us</a></footer>
+</body></html>

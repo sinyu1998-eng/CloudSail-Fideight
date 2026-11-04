@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  播客 RSS Feed · Podcast RSS feed（供小宇宙 / Apple Podcasts / Spotify 认领）
+  发布地址 Publication URL（开启 GitHub Pages 后）:
+    https://sinyu1998-eng.github.io/cloudsail-fideight/podcast/feed.xml
+  使用说明 Usage:
+    1. 把音频 mp3 放到 podcast/audio/ 下，或使用外部音频直链
+    2. 复制一个 <item> 块填入每期信息；搜 "TODO" 逐项补齐
+    3. Feed 一旦在小宇宙认领，请勿再改 URL
+-->
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>每一票货，链上作证</title>
+    <!-- EN: Every Shipment, Attested -->
+    <link>https://sinyu1998-eng.github.io/cloudsail-fideight/</link>
+    <language>zh-cn</language>
+    <copyright>© 2026 Qianru (Carol Qianru Huang)</copyright>
+    <description>一档用真实订单拆解跨境信任的播客。每期一票货、一本信任账本：验货现场、对谈工厂老板与 Web3 builder、以及不定期建设日志。CloudSail × Fideight 出品。
+A podcast dissecting cross-border trust through real shipments — one order, one trust ledger per episode. By CloudSail × Fideight.</description>
+    <itunes:author>Carol Huang（黄倩如）</itunes:author>
+    <itunes:owner>
+      <itunes:name>Carol Huang（黄倩如）</itunes:name>
+      <!-- TODO: 换成你的联系邮箱（小宇宙验证可能用到） -->
+      <itunes:email>TODO@example.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://sinyu1998-eng.github.io/cloudsail-fideight/podcast/cover.jpg" />
+    <!-- TODO: 上传 3000x3000 封面图 cover.jpg 到本目录 -->
+    <itunes:category text="Business" />
+    <itunes:category text="Technology" />
+    <itunes:explicit>false</itunes:explicit>
+
+    <!-- ======== 第 1 期（模板，复制此块新增一期） ======== -->
+    <item>
+      <title>EP01 · $57.85 的警告：为什么我们敢对客户说「这单别打」</title>
+      <!-- TODO: 音频文件地址（本地 audio/ 或外链），必须是公开可访问的直链 -->
+      <enclosure url="https://sinyu1998-eng.github.io/cloudsail-fideight/podcast/audio/ep01.mp3"
+                 length="20971520" type="audio/mpeg" />
+      <guid isPermaLink="false">cloudsail-ep01</guid>
+      <!-- TODO: 换成真实发布日期，格式 RFC822 -->
+      <pubDate>Tue, 10 Nov 2026 08:00:00 +0800</pubDate>
+      <!-- TODO: 换成音频真实时长 秒 -->
+      <itunes:duration>1320</itunes:duration>
+      <description>黑五 AI 助理挑战赛路演现场，我们的 Agent 实算出一单亏损 $57.85 并当场建议「别打」。本期拆解：为什么确定性算账比讲增长故事更值钱，以及跨境卖家最常见的价格带幻觉。
+On stage at the Black Friday AI Assistant Challenge, our agent publicly computed a −$57.85/unit loss and said "don't take it." Why deterministic math beats rosy narratives.</description>
+      <content:encoded><![CDATA[
+<p>本期看点 Highlights:</p>
+<ul>
+  <li>路演现场实算：−$57.85/单的亏损预警</li>
+  <li>价格带幻觉：广告费如何吃掉小单利润</li>
+  <li>信任账本：这单的四个断点</li>
+</ul>
+<p>加入内测群 Join the seed group: <a href="https://sinyu1998-eng.github.io/cloudsail-fideight/seed.html">seed.html</a> · 微信 huoban999zhq</p>
+]]>
+      </content:encoded>
+    </item>
+
+    <!-- ======== 在此之下复制新 <item> ======== -->
+
+  </channel>
+</rss>
