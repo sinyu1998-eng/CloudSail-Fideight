@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>产品全景 The Whole Product · Fideight × CloudSail</title>
+<title>产品全景 The Whole Product · CloudSail × Fideight</title>
 <link rel="stylesheet" href="style.css">
 <style>
   .toc a{display:inline-block;margin:4px 10px 4px 0;padding:6px 14px;border:1px solid var(--purple);border-radius:20px;text-decoration:none;color:var(--purple);font-weight:600}
@@ -15,7 +15,7 @@
 <body>
 <div class="ossbar">🌟 本项目已开源 Open-sourced · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub 仓库 Repository</a> · <span class="en">star us to spread the vision →</span>点 Star →</div>
 <header class="site">
-  <a class="logo" href="index.html">Fideight<b>·</b>CloudSail</a>
+  <a class="logo" href="index.html">CloudSail<b>·</b>Fideight</a>
   <nav>
     <a href="index.html">首页 Home</a>
     <a class="on" href="product.html">产品全景 Product</a>
@@ -31,39 +31,34 @@
 </header>
 
 <div class="hero">
-  <h1>产品全景：AI-Native 跨境贸易信用协议</h1>
-  <div class="en herosub">The Whole Product, In One Page</div>
-  <p>以前我们把能力分散在许多页面里。这一页把它们按结构讲清楚：<b>底座六层 → 八大模块 → 三类角色 → 核心公式 → 生态位 → 证据流</b>。读完你就明白我们在做什么、为什么现在能做、以及你可以怎样接入。</p>
-  <p class="en">Everything we build, structured: six base layers → eight modules → three roles → core formulas → ecosystem position → evidence flow. What we do, why now, and how to plug in.</p>
+  <h1>产品全景：AI 全托管出海 × 链上信任</h1>
+  <div class="en herosub">AI-Hosted Export, With an Onchain Security Layer</div>
+  <p>以前我们把能力分散在许多页面里。这一页按结构讲清楚：<b>CloudSail 全托管流水线 → 八大模块 → 工厂只需要做三件事 → 核心公式 → Fideight 安全层 → 证据流</b>。读完你就明白：AI 接管外贸全流程，工厂只需要发货。</p>
+  <p class="en">Everything, structured: the CloudSail hosting pipeline → eight modules → the factory ships, nothing else → core formulas → the Fideight security layer → evidence flow.</p>
 </div>
 
 <section class="toc">
-  <a href="#s1">01 底座 Base</a><a href="#s2">02 模块 Modules</a><a href="#s3">03 角色 Roles</a><a href="#s4">04 公式 Formulas</a><a href="#s5">05 生态 Ecosystem</a><a href="#s6">06 证据流 Evidence Flow</a><a href="#s7">07 为什么是现在 Why Now</a>
+  <a href="#s1">01 全托管 Pipeline</a><a href="#s2">02 模块 Modules</a><a href="#s3">03 工厂 Three Moves</a><a href="#s4">04 公式 Formulas</a><a href="#s5">05 安全层 Security</a><a href="#s6">06 证据流 Evidence Flow</a><a href="#s7">07 为什么是现在 Why Now</a>
 </section>
 
 <section id="s1">
-  <div class="secno">01 · Foundation</div>
-  <h2>底座：六个层级，各管一件事<span class="en">Six layers, one job each</span></h2>
-  <div class="grid g3">
+  <div class="secno">01 · Pipeline</div>
+  <h2>CloudSail 全托管：四层流水线<span class="en">The AI-hosting pipeline — four layers</span></h2>
+  <div class="grid g4">
     <div class="card"><h3>L0 感知层</h3><div class="en">Perception</div>
-      <p>AI 眼镜现场采集：开箱、点数、序列号、封箱视频 → 统一打时间戳与哈希。人看不了的批量细节，机器看。</p>
-      <p class="en">AI-glasses field capture: unboxing, counting, serials, sealing video — timestamped and hashed.</p></div>
-    <div class="card"><h3>L1 存证层</h3><div class="en">Attestation</div>
-      <p>证据原文上 IPFS/Arweave，链上（Ethereum + EAS）只存 32 字节哈希与指针。便宜、可验证、永不过期。</p>
-      <p class="en">Payloads to IPFS/Arweave; only the 32-byte hash + pointer go on-chain (EAS). Cheap, verifiable, permanent.</p></div>
-    <div class="card"><h3>L2 托管层</h3><div class="en">Escrow</div>
-      <p>MilestoneEscrow 合约：货款按里程碑（签约/验货/发货/签收）分段锁放，USDC 结算。</p>
-      <p class="en">MilestoneEscrow contract releases USDC by milestones: sign / inspect / ship / receive.</p></div>
-    <div class="card"><h3>L3 仲裁层</h3><div class="en">Arbitration</div>
-      <p>争议走 Kleros 去中心化陪审团，证据包即 EAS 存证。平台不充当裁判。</p>
-      <p class="en">Disputes go to a Kleros jury with the EAS evidence pack. The platform never plays judge.</p></div>
-    <div class="card"><h3>L4 合规层</h3><div class="en">Compliance Oracle</div>
-      <p>禁运/制裁/两用物项规则引擎（如无人机→俄罗斯 = 拦截），在交易发生前生效。</p>
-      <p class="en">Embargo/sanctions/dual-use rule engine fires before money moves.</p></div>
-    <div class="card"><h3>L5 市场层</h3><div class="en">Inspector Marketplace</div>
-      <p>验货方质押保证金接单，作假即违规失格、保证金扣减。信用好则接更多单。</p>
-      <p class="en">Staked inspectors take orders; fraud means disqualification and bond deduction.</p></div>
+      <p>AI 眼镜现场采集 + 店铺订单（Shopify/Amazon/CSV）+ 邮件聊天多源汇入，机器看人看不过来的细节。</p>
+      <p class="en">Glasses in the field + store orders + mail/chat — multi-source, machine-first.</p></div>
+    <div class="card"><h3>L1 决策层</h3><div class="en">Decision</div>
+      <p>LLM 读单据、读聊天、读证据并给出建议；<b>所有钱走确定性公式引擎</b>，AI 理解但不碰钱。</p>
+      <p class="en">LLM understands documents, chats, evidence and suggests; money math stays deterministic.</p></div>
+    <div class="card"><h3>L2 执行层</h3><div class="en">Execution</div>
+      <p>建档、三档报价、15 国语种翻译、跟单催收定时任务、验货排期、物流跟踪——自动流转，人来拍板。</p>
+      <p class="en">Profiles, quotes, translation, follow-ups, inspection scheduling, tracking — auto-flowed, human-approved.</p></div>
+    <div class="card"><h3>L3 结算层</h3><div class="en">Settlement</div>
+      <p>发货即触发 Fideight 安全层：证据上链、托管放款、佣金分账，全程后台静默完成。</p>
+      <p class="en">Shipping triggers the Fideight layer: attestation, escrow release, commission split — silently.</p></div>
   </div>
+  <div class="warn"><b>一句话 One line：</b>业务员只剩两件事——<b>拍板</b>和<b>见客户</b>；工厂只剩一件——<b>发货</b>。</div>
 </section>
 
 <section id="s2">
@@ -82,18 +77,18 @@
 </section>
 
 <section id="s3">
-  <div class="secno">03 · Roles</div>
-  <h2>三类角色，各取所需<span class="en">Three roles, each gets what they need</span></h2>
+  <div class="secno">03 · Three Moves</div>
+  <h2>工厂只需要做三件事<span class="en">The factory ships — that's the job</span></h2>
   <div class="grid g3">
-    <div class="card"><h3>卖家 Seller</h3><div class="en">Seller</div>
-      <p>接入店铺 → 订单进驾驶舱 → 发货前验货存证 → 买家放心放款 → 佣金/货款自动结算。</p>
-      <p class="en">Connect store → orders flow in → pre-shipment attestation → buyer releases with confidence → auto settlement.</p></div>
-    <div class="card"><h3>买家 Buyer</h3><div class="en">Buyer</div>
-      <p>货款进托管而非直接打款；看到链上验货证据再放行；不满意走仲裁，证据现成。</p>
-      <p class="en">Funds sit in escrow; release only after seeing on-chain inspection evidence; disputes come with evidence.</p></div>
-    <div class="card"><h3>验货方 Inspector</h3><div class="en">Inspector</div>
-      <p>质押接单 → 眼镜现场采集 → 存证上链即结算服务费；作假违规失格，信用好接更多单。</p>
-      <p class="en">Stake to take orders → capture on-site → get paid at attestation. Fraud = disqualification.</p></div>
+    <div class="card"><h3>1 发货</h3><div class="en">Ship</div>
+      <p>订单、报价、合同、翻译由 CloudSail 处理完，工厂拿到的是确定的生产指令。</p>
+      <p class="en">Orders, quotes, contracts, translation — done. The factory gets a firm production order.</p></div>
+    <div class="card"><h3>2 配合验货</h3><div class="en">Let us inspect</div>
+      <p>验货方戴 AI 眼镜上门，开箱点数自动留证；证据即信用，验完就是放款凭证。</p>
+      <p class="en">A staked inspector captures on-site; the evidence itself becomes the release voucher.</p></div>
+    <div class="card"><h3>3 收款</h3><div class="en">Get paid</div>
+      <p>货款在里程碑托管里，验货通过自动放款 USDC/法币分账——不用追、不用赌人品。</p>
+      <p class="en">Escrowed funds release on attested milestones — no chasing, no trust gamble.</p></div>
   </div>
 </section>
 
@@ -112,15 +107,14 @@
 </section>
 
 <section id="s5">
-  <div class="secno">05 · Ecosystem</div>
-  <h2>生态位：我们不替谁，我们连接谁<span class="en">We replace no one — we connect everyone</span></h2>
-  <div class="grid g3">
-    <div class="card"><h3>Airwallex</h3><p>法币轨道：130+ 币种、全球收款账户，佣金与货款分账。<span class="en">Fiat rails: 130+ currencies, split settlement.</span></p></div>
-    <div class="card"><h3>Kleros</h3><p>去中心化仲裁，陪审团经济激励对齐。<span class="en">Decentralized arbitration with aligned incentives.</span></p></div>
-    <div class="card"><h3>Ethereum + EAS</h3><p>存证标准层，证据可验证性公共品。<span class="en">Attestation standard as a public good.</span></p></div>
-    <div class="card"><h3>IPFS / Arweave</h3><p>证据原文永久存储，链上只留指纹。<span class="en">Permanent evidence storage; chain keeps fingerprints.</span></p></div>
-    <div class="card"><h3>DeepSeek / dsh</h3><p>LLM 理解与编排（MCP 工具化），不碰资金。<span class="en">LLM understanding & orchestration via MCP tools.</span></p></div>
-    <div class="card"><h3>验货方网络</h3><p>质押上岗的分布式人力，眼镜是他们的生产工具。<span class="en">Staked distributed workforce; glasses are their tool.</span></p></div>
+  <div class="secno">05 · Security Layer</div>
+  <h2>Fideight 安全层：钱与信的四道闸<span class="en">The Fideight security layer — four gates for money & trust</span></h2>
+  <p>CloudSail 是主机，Fideight 是主机底下的安全层——对工厂完全透明，只在"钱要动"的时刻亮出来。<span class="en">CloudSail is the host OS; Fideight is the security layer under it — invisible to the factory until money moves.</span></p>
+  <div class="grid g4">
+    <div class="card"><h3>存证 Attestation</h3><div class="en">Evidence</div><p>原文上 IPFS/Arweave，链上（EAS）只存 32 字节哈希。可验证、极便宜、永不过期。<span class="en">Payloads off-chain, hash on-chain (EAS).</span></p></div>
+    <div class="card"><h3>托管 Escrow</h3><div class="en">Milestone escrow</div><p>USDC 按里程碑锁放（签约/验货/发货/签收），证据到、自动放。<span class="en">Staged release on attested milestones.</span></p></div>
+    <div class="card"><h3>合规 Compliance</h3><div class="en">Oracle</div><p>禁运/制裁规则引擎在钱动之前拦截（如无人机→俄罗斯 = BLOCKED）。<span class="en">Rule engine blocks before money moves.</span></p></div>
+    <div class="card"><h3>仲裁 Arbitration</h3><div class="en">Kleros</div><p>争议走 Kleros 陪审团，证据包三分钟送达，平台不当裁判。<span class="en">Kleros jury with ready evidence packs.</span></p></div>
   </div>
 </section>
 
@@ -149,6 +143,6 @@
   </div>
 </section>
 
-<footer class="site">Fideight × CloudSail · AI-Native Trade Credit Protocol · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub</a></footer>
+<footer class="site">CloudSail × Fideight · AI-Native Trade Credit Protocol · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub</a></footer>
 <script src="assets/i18n.js"></script>
 </body></html>
