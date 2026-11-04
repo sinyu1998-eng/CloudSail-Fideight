@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专栏 Articles · Fideight × CloudSail</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="ossbar">🌟 本项目已开源 Open-sourced · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub 仓库 Repository</a> →</div>
+<header class="site">
+  <a class="logo" href="index.html">Fideight<b>·</b>CloudSail</a>
+  <nav>
+    <a href="index.html">首页 Home</a>
+    <a href="product.html">产品全景 Product</a>
+    <a class="on" href="articles.html">专栏 Articles</a>
+    <a href="cockpit.html">驾驶舱 Cockpit</a>
+    <a href="ru.html">Оплата佣金 RU</a>
+    <a href="contact.html">联系 Contact</a>
+    <a class="langswitch" href="javascript:void(0)" onclick="toggleLang()" id="langToggle">中文</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>专栏：把理论写成地基</h1>
+  <div class="en herosub">The Column — Theory as Foundation</div>
+  <p>跨境信用不是口号，是可推导的结构。这里写我们用到的数学、协议设计与失败案例复盘。<span class="en">Cross-border trust is a derivable structure, not a slogan. Math, protocol design, and autopsies.</span></p>
+</div>
+
+<section>
+  <h2>文章列表<span class="en">Articles</span></h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>马尔可夫链与一票货的九态人生</h3><div class="en">Markov Chains & the Nine Lives of a Shipment</div>
+      <p>把履约建模成九状态马尔可夫链：每一票货在状态间转移，异常状态的吸收概率告诉我们该在哪一步加保险。链上存证恰好提供了转移矩阵的观测数据。</p>
+      <p class="en">Model fulfillment as a nine-state Markov chain; absorption probabilities tell us where to add insurance. On-chain attestations are exactly the observation data for the transition matrix.</p>
+      <a class="btn sm" href="articles/markov-chain-fulfillment.html">阅读 Read →</a>
+    </div>
+    <div class="card">
+      <h3>为什么 TradeLens 们死了（连载预告）</h3><div class="en">Why TradeLens Died — series preview</div>
+      <p>先行者复盘系列：不是技术失败，是数据可信性与联盟冷启动失败。先行版见 <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight/blob/main/docs/why-now.md">docs/why-now.md</a>。</p>
+      <p class="en">An autopsy series: data trust and consortium cold-start, not technology. Preview in docs/why-now.md.</p>
+      <span class="btn sm" style="opacity:.5">连载中 Coming soon</span>
+    </div>
+    <div class="card">
+      <h3>账本不能猜：AI-Native 的确定性边界</h3><div class="en">Ledgers Don't Guess — the deterministic boundary of AI-native systems</div>
+      <p>LLM 负责理解，公式引擎负责钱。这篇文章推导边界该画在哪。（连载预告）</p>
+      <p class="en">LLM understands; the formula engine pays. Where exactly to draw the line. (Coming soon)</p>
+      <span class="btn sm" style="opacity:.5">连载中 Coming soon</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site">Fideight × CloudSail · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub</a></footer>
+<script src="assets/i18n.js"></script>
+</body></html>

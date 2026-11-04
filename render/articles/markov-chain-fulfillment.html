@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>马尔可夫链与一票货的九态人生 · Fideight × CloudSail</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+  article{max-width:860px;margin:0 auto;line-height:1.9}
+  article h2{margin-top:42px}
+  .math{font-family:monospace;background:#f6f2ea;border:1px solid #e2d9c8;border-radius:10px;padding:14px 18px;overflow-x:auto}
+  .statetag{display:inline-block;background:var(--purple);color:#fff;border-radius:6px;padding:2px 10px;margin:2px 4px;font-size:13px}
+  .statetag.bad{background:#a33}
+</style></head>
+<body>
+<div class="ossbar">🌟 本项目已开源 Open-sourced · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub 仓库 Repository</a> →</div>
+<header class="site">
+  <a class="logo" href="../index.html">Fideight<b>·</b>CloudSail</a>
+  <nav>
+    <a href="../index.html">首页 Home</a>
+    <a href="../product.html">产品全景 Product</a>
+    <a class="on" href="../articles.html">专栏 Articles</a>
+    <a href="../cockpit.html">驾驶舱 Cockpit</a>
+    <a href="../contact.html">联系 Contact</a>
+    <a class="langswitch" href="javascript:void(0)" onclick="toggleLang()" id="langToggle">中文</a>
+  </nav>
+</header>
+
+<article>
+  <div class="hero">
+    <h1>马尔可夫链与一票货的九态人生</h1>
+    <div class="en herosub">Markov Chains &amp; the Nine Lives of a Shipment</div>
+    <p class="cn-only">作者：Qianru（云帆出海 CloudSail）· 专栏第 1 篇</p>
+  </div>
+
+  <h2>一、为什么跨境履约适合用马尔可夫链<span class="en">Why fulfillment fits a Markov chain</span></h2>
+  <p>一票跨境货物的一生，可以被离散成有限个<b>状态</b>；而它下一步去哪里，几乎只取决于它<b>现在</b>在哪，而不是它过去走过哪条路。这正是马尔可夫性（Markov property）：</p>
+  <div class="math">P(X_{t+1} = j | X_t = i, X_{t-1}, …, X_0) = P(X_{t+1} = j | X_t = i)</div>
+  <p class="en">The next state of a shipment depends almost entirely on its current state, not its path history — that is exactly the Markov property.</p>
+  <p>注意：这是工程近似，不是物理定律。真实世界里"被退过一次款的订单更容易再出问题"这种记忆效应确实存在——我们用<b>吸收态细分</b>（把"争议"拆成"首次争议/再次争议"）来消化它，这是标准的补救手法。</p>
+
+  <h2>二、九个状态<span class="en">The nine states</span></h2>
+  <div>
+    <span class="statetag">S1 已下单 Ordered</span>
+    <span class="statetag">S2 合规通过 Cleared</span>
+    <span class="statetag">S3 已托管 Funded</span>
+    <span class="statetag">S4 验货存证 Attested</span>
+    <span class="statetag">S5 已发货 Shipped</span>
+    <span class="statetag">S6 已签收 Received</span>
+    <span class="statetag">S7 结清 Settled</span>
+    <span class="statetag bad">S8 争议 Disputed</span>
+    <span class="statetag bad">S9 坏账 Defaulted</span>
+  </div>
+  <p>其中 S7 与 S9 是<b>吸收态</b>（进去就出不来）；S8 是暂态，可以回到 S4–S6 的任何一步，也可以跌进 S9。</p>
+  <p class="en">S7 and S9 are absorbing states; S8 is transient — it can bounce back to S4–S6 or fall into S9.</p>
+
+  <h2>三、转移矩阵与它的业务读法<span class="en">The transition matrix, read as a business</span></h2>
+  <div class="math">       S2    S3    S4    S5    S6    S7    S8    S9
+S1  [ .95,    0,    0,    0,    0,    0,   .05,    0]
+S2  [   0,  .98,    0,    0,    0,    0,   .02,    0]
+S3  [   0,    0,  .96,    0,    0,    0,   .04,    0]
+S4  [   0,    0,    0,  .97,    0,    0,   .03,    0]
+S5  [   0,    0,    0,    0,  .94,    0,   .06,    0]
+S6  [   0,    0,    0,    0,    0,  .97,   .03,    0]
+S8  [   0,    0,  .30,  .20,  .15,    0,    0,  .35]</div>
+  <p>读法示例：从"已发货 S5"出发，6% 的票会进争议。而争议票里有 35% 最终跌进坏账 S9——所以<b>整条链最贵的边是 S8→S9</b>。</p>
+
+  <h2>四、吸收概率：钱到底亏在哪一步<span class="en">Absorption probabilities: where money is actually lost</span></h2>
+  <p>把矩阵分块成 P = [Q R; 0 I]，则基本矩阵 N = (I − Q)⁻¹，从状态 i 出发最终被 S9（坏账）吸收的概率：</p>
+  <div class="math">B = N · R，坏账率 b_i = B[i, S9]</div>
+  <p>用上面的示意矩阵粗算：从 S5 出发的坏账概率 ≈ 0.06 × 0.35 ≈ <b>2.1%</b>；从 S3 出发 ≈ 0.04×0.35 + 后续各步累乘 ≈ <b>3.4%</b>。这告诉我们两件事：</p>
+  <p><b>1)</b> 保险和仲裁资源应该重点铺在 S5→S8 这条边上（发货到签收之间），而不是均匀撒。<b>2)</b> 每降低 1 个百分点的 S8→S9 转化，全程坏账率近似线性改善——这就是为什么我们把"争议三分钟证据包"当作核心指标。</p>
+  <p class="en">Insurance and arbitration belong on the S5→S8 edge, not spread evenly. Every point shaved off S8→S9 improves end-to-end default rate roughly linearly — hence our "evidence pack in three minutes" KPI.</p>
+
+  <h2>五、关键一步：转移矩阵不是拍脑袋，是观测出来的<span class="en">The matrix is observed, not guessed</span></h2>
+  <p>传统的贸易平台拿不到可信的状态数据——验货报告是 PDF，可以改；聊天记录在 WhatsApp，可以删。我们的链路里，<b>每一次状态转移都是一笔 EAS 链上存证</b>：验货通过有哈希、发货有物流单据哈希、签收有签名。也就是说，转移矩阵 P 的每一个元素都是可审计的频次统计：</p>
+  <div class="math">p̂_ij = N_ij / Σ_k N_ik，其中 N_ij = 链上观测到的 i→j 转移次数</div>
+  <p>这就是"链上作证"超越"存个证"的地方：存证是防守（出事了有证据），而矩阵是进攻（没出事就知道该在哪一步设防）。</p>
+  <p class="en">Attestation is defense (evidence when things go wrong); the matrix is offense (knowing where to fortify before they do).</p>
+
+  <h2>六、诚实声明<span class="en">Honest caveats</span></h2>
+  <p>· 上面的数字是结构示意，不是实测——实测需要足够多的链上转移样本，这正是我们要做试点的原因。<br>
+  · 马尔可夫性在"重复争议"上会被打破，我们用状态细分补偿；更精细的模型（半马尔可夫、生存分析）留给连载。<br>
+  · 矩阵会随品类、航线、季节漂移，需要滚动窗口重估——这会成为驾驶舱里的一张实时表。</p>
+
+  <h2>七、延伸阅读<span class="en">Further reading</span></h2>
+  <p>· Norris, <i>Markov Chains</i>（Cambridge, 1997）—— 第 1、3 章足够覆盖本文全部工具。<br>
+  · Kemeny &amp; Snell, <i>Finite Markov Chains</i> —— 吸收链的经典处理。<br>
+  · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight/blob/main/docs/architecture.md">docs/architecture.md</a> —— 九状态在我们的托管合约里如何落地。</p>
+
+  <p style="margin-top:40px"><a class="btn" href="../articles.html">← 返回专栏 Back to column</a></p>
+</article>
+
+<footer class="site">Fideight × CloudSail · 专栏 Column · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub</a></footer>
+<script src="../assets/i18n.js"></script>
+</body></html>

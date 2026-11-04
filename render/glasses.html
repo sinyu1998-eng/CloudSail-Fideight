@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CloudSail 验货官眼镜 · 全球首款会作证的 AI 眼镜</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ossbar">🌟 本项目已开源 Open-sourced · <a href="https://github.com/sinyu1998-eng/CloudSail-Fideight">GitHub 仓库 Repository</a> · 点 Star 让更多人看到我们的前景 <span class="en">— star us to spread the vision</span> →</div>
+<header class="site">
+  <a class="logo" href="index.html">Fideight<b>·</b>CloudSail</a>
+  <nav>
+    <a href="index.html">首页 Home</a>
+    <a href="product.html">产品全景 Product</a>
+    <a href="articles.html">专栏 Articles</a>
+    <a href="cockpit.html">驾驶舱 Cockpit</a>
+    <a href="tech.html">技术架构 Tech</a>
+    <a href="bp.html">商业计划 BP</a>
+    <a href="competitors.html">竞品 Analysis</a><a href="prototype.html">原型 Prototype</a><a href="deck.html">路演 Roadshow</a>
+    <a href="pay.html">收款 Pay</a>
+    <a href="seed.html">种子群 Seed Group</a>
+    <a href="crowdfund.html">众筹 Crowdfund</a>
+    <a class="on" href="glasses.html">眼镜 Glasses</a>
+    <a href="contact.html">联系 Contact</a>
+    <a class="langswitch" href="javascript:void(0)" onclick="toggleLang()" id="langToggle">中文</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>CloudSail 验货官眼镜</h1>
+  <div class="en herosub">The AI glass that attests</div>
+  <p>一副能戴一整天的眼镜。现场拍一张货、说一句"验货完成"，证据哈希立刻上链，托管款自动放行。<br>
+  <span class="en">An all-day glass. Capture a unit, say "inspection done", the evidence hash goes onchain, escrow auto-releases.</span></p>
+  <a class="btn gold" href="crowdfund.html">支持众筹 Back on Kickstarter →</a>
+  <a class="btn ghost" href="#odm">我是制造方 · 看合作 I'm a manufacturer</a>
+</section>
+
+<section>
+  <h2>和"消费级玩具"的根本区别<span class="en">Why it's not another consumer toy</span></h2>
+  <div class="grid g3">
+    <div class="card gold">
+      <h3>一键作证 Capture → Attest</h3>
+      <p class="en">One glove-operable button. Capture → hash → EAS onchain → auto escrow release.</p>
+      <p>物理抓拍键（手套可操作）→ 抽字段 → 哈希上链 → 触发 MilestoneEscrow 自动放款。消费级眼镜没有这个刚需键。</p>
+    </div>
+    <div class="card">
+      <h3>微距读码 Macro OCR</h3>
+      <p class="en">5 cm macro reads serials & QC marks — the core of inspection.</p>
+      <p>12–16MP 自动对焦 + 微距模式，5cm 可读序列号/铭牌/QC 标；仓储弱光可用。</p>
+    </div>
+    <div class="card">
+      <h3>带位置的证据 Geo-tagged</h3>
+      <p class="en">GPS/BeiDou stamps every evidence — "goods in Shenzhen, not overseas".</p>
+      <p>每一条证据带地理位置与姿态，证明"货在哪一排、和谁同框"，不可抵赖。</p>
+    </div>
+  </div>
+  <div class="callout"><b>一句话给工厂听：</b>你造一副能戴一天的眼镜，我把它变成每个跨境卖家都想要的"验货证据机器"，卖出去的钱我们按协议长期分。<br>
+  <span class="en">One-liner for the factory: you build an all-day glass; we turn it into an inspection-evidence machine — and we split the recurring revenue.</span></div>
+</section>
+
+<section>
+  <h2>硬件功能规格<span class="en">Hardware functional spec (v2 ODM targets)</span></h2>
+  <div class="grid g4">
+    <div class="card"><h3>0101 计算 Compute</h3><p class="en">Snapdragon AR1 · NPU ≥2 TOPS</p><p>4× Cortex-A55@2.0GHz；端侧跑 OCR/语音唤醒，无网也能初筛。BOM 降档版可选中端 SoC。</p></div>
+    <div class="card"><h3>0202 采集 Capture</h3><p class="en">12–16MP AF · macro 5cm</p><p>微距读序列号/QC 标；1080p 弱光视频；可选 120° 上下文副摄。波导 MicroLED ≥1200 nits。</p></div>
+    <div class="card"><h3>0303 形态 Form</h3><p class="en">≤50 g · prescription-ready</p><p>后镜腿配重全天佩戴；标准框体支持处方镜片；对标 Monako 48g 同代际。</p></div>
+    <div class="card"><h3>0404 音频 Audio</h3><p class="en">bone-conduction mic</p><p>鼻托位骨传导麦（嘈杂环境可用）+ 2–3 气导波束麦；集成开放式扬声器。</p></div>
+    <div class="card"><h3>0505 电池 Battery</h3><p class="en">≥300 mAh · ≥4h screen-on</p><p>亮屏 ≥4h、常规 ≥8h；Type-C / 触点充电盒选配。</p></div>
+    <div class="card"><h3>0606 传感 Sensors</h3><p class="en">capture btn · GPS · IMU</p><p>手套可操作抓拍键（刚需差异点）、六轴 IMU、GPS/北斗、Vision Engine 手势。</p></div>
+    <div class="card"><h3>0707 连接 Comms</h3><p class="en">Wi-Fi + BT · eSIM opt</p><p>选配 eSIM/4G 现场无手机也能传；端侧 libsodium + Nym 隐私传输。</p></div>
+    <div class="card"><h3>合规 Compliance</h3><p class="en">CCC/CE/FCC · IEC 62471</p><p>强制国内/出海认证 + 光生物安全眼睛安全；支持 OTA 远程升级。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>软件与链上集成<span class="en">Software & on-chain integration (owned by us)</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3>CloudSail Capture OS</h3><p class="en">voice→structured · 15 languages · OCR</p><p>语音转结构化（产品/数量/目的地/顾虑）、15 国语言实时翻译、OCR 序列号与质检单。</p></div>
+    <div class="card"><h3>端侧哈希 + 存证 SDK</h3><p class="en">SHA-256 + Merkle · EAS · IPFS</p><p>证据包自动 POST /api/evidence → EAS 盖章 → 返回可公开核验的 Attestation UID。</p></div>
+    <div class="card"><h3>一键作证流</h3><p class="en">capture → hash → onchain → release</p><p>按抓拍键即触发证据包，哈希上链后自动调用 MilestoneEscrow 按里程碑放款。</p></div>
+    <div class="card"><h3>无感钱包 + 合规</h3><p class="en">ERC-4337 · EIP-712 · compliance oracle</p><p>扫码授权免 Gas；每次放款前过合规 Oracle，拒单即链上留痕——拒单是卖点。</p></div>
+  </div>
+</section>
+
+<section id="odm">
+  <h2>制造合作 · 给华强北老板<span class="en">Manufacturing partnership — for Huaqiangbei</span></h2>
+  <div class="grid g2">
+    <div class="card gold"><h3>我们需要工厂交付</h3><p class="en">What we need from you</p>
+      <p>• BOM ≤ $160（守住 $399 档 ~35% 毛利）<br>
+      • 代出 CCC/CE/FCC + 光生物安全报告<br>
+      • EVT→DVT→PVT 三阶段样机与量产<br>
+      • 首批量产 MOQ 1k–3k，开模/tooling 报价<br>
+      • 出货前抓拍键+哈希流程冒烟测试</p></div>
+    <div class="card"><h3>工厂能拿到</h3><p class="en">What you earn — recurring</p>
+      <p>• 硬件量产合理加工毛利<br>
+      • <b>协议分成</b>：眼镜激活后存证订阅 + 托管费长期返点<br>
+      • 进入 CloudSail×Fideight 出海渠道（KS/PH/贸易服务网）<br>
+      • "全球首款会作证的 AI 眼镜"量产地背书</p></div>
+  </div>
+  <div class="callout">
+    <b>完整功能规格书（中英双语，可直接发工程师）：</b>
+    <a href="docs/glasses-oem.md">docs/glasses-oem.md</a><br>
+    <span class="en">Full ODM functional spec (bilingual): the MD above — hand it to your engineering PM.</span>
+  </div>
+  <a class="btn gold" href="contact.html">联系我们谈合作 Talk to us →</a>
+</section>
+
+<section>
+  <h2>常见问题<span class="en">FAQ</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3>和 Monako 等消费眼镜有什么不同？</h3><p class="en">Same hardware generation, different job.</p><p>硬件代际同档（证明供应链可行），差异全在"验货作证"功能与协议闭环——工厂无需重投，我们能持续收费。</p></div>
+    <div class="card"><h3>现在能买到吗？</h3><p class="en">Crowdfunding now, shipping later.</p><p>v1 已用 Rokid 参考设计跑通软件与协议；v2 自研 ODM 正找华强北伙伴。先在 Kickstarter 支持，量产即交付。</p></div>
+    <div class="card"><h3>工厂要懂区块链吗？</h3><p class="en">No — we own the protocol.</p><p>工厂只需暴露摄像头/麦/抓拍键/GPS 标准接口并过认证；链上作证、钱包、托管全在我们软件侧。</p></div>
+    <div class="card"><h3>数据安全吗？</h3><p class="en">Minimal onchain, encrypted offchain.</p><p>链上只存哈希与状态，原始证据加密存 IPFS/Arweave，密钥在交易各方；合规例外可 selective disclosure。</p></div>
+  </div>
+</section>
+
+<footer class="site">Fideight × CloudSail · 全球首款会作证的 AI 验货眼镜 · Builder: Qianru (Carol Qianru Huang)<br>
+<a href="index.html">首页</a> · <a href="crowdfund.html">众筹</a> · <a href="seed.html">种子群</a> · <a href="contact.html">联系</a></footer>
+<script src="assets/i18n.js"></script>
+</body>
+</html>
