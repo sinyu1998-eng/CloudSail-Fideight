@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fideight · 商业计划 Business Plan</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site">
+  <a class="logo" href="index.html"><span class="mark">◈</span>CloudSail<b>·</b>Fideight</a>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="product.html">产品</a>
+    <a href="cockpit.html">驾驶舱</a>
+    <a href="articles.html">专栏</a>
+    <a href="ru.html">RU 佣金</a>
+    <a href="contact.html">联系</a>
+    <a href="contact.html" class="btn-nav">预约演示</a>
+    <a class="langswitch" href="javascript:void(0)" onclick="toggleLang()" id="langToggle">中 / EN</a>
+  </nav>
+</header>
+
+<section>
+  <h2>问题：信任成本高达交易额 3–8%<span class="en">Problem: 3–8% of order value is pure trust cost</span></h2>
+  <table class="table">
+    <tr><th>环节 Stage</th><th>现状 Status quo</th><th>损失 Cost</th></tr>
+    <tr><td>验资 Proof of funds</td><td>银行截图、口头承诺，可伪造</td><td>骗货 / 骗定金</td></tr>
+    <tr><td>验货 Inspection</td><td>单方验货报告，买方无法核验</td><td>以次充好、调包</td></tr>
+    <tr><td>进度 Progress</td><td>微信邮件传进度，无不可篡改记录</td><td>拖期扯皮、举证困难</td></tr>
+    <tr><td>支付 Payment</td><td>T/T 预付全凭信任，尾款拖欠常见</td><td>现金流断裂</td></tr>
+    <tr><td>核算 Accounting</td><td>各系统手工对账</td><td>月末对账灾难</td></tr>
+    <tr><td>合规 Compliance</td><td>出口管制/制裁筛查靠人工</td><td>巨额罚单与刑事风险</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>市场与切入<span class="en">Market & wedge</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3>首切：高价值跨境贸易</h3><div class="en">First wedge</div><p>芯片、设备、大宗品的中小贸易商与工厂——单价高、信任痛感最强、决策链短。展会现场价值感知最强。</p><p class="en">Mid-size traders & factories moving chips, equipment and commodities: highest trust pain, shortest decision chain.</p></div>
+    <div class="card"><h3>替代方案对比</h3><div class="en">Why not alternatives</div><p>贸易融资 SaaS 无链上担保；链上托管协议无现场采集与合规拦截。Fideight = 证据 + 资金 + 合规三合一。</p><p class="en">Trade-tech has no onchain guarantee; escrow protocols have no field capture. We combine all three.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>商业模式<span class="en">Business model</span></h2>
+  <div class="grid g3">
+    <div class="stat"><b>0.3–0.8%</b><span>协议费 / 托管交易额</span><i>Protocol fee on escrowed GMV · ~95% GM</i></div>
+    <div class="stat"><b>10–15%</b><span>验货市场 GMV 抽成</span><i>Inspection take rate · ~70% GM</i></div>
+    <div class="stat"><b>¥3–8k</b><span>核算 SaaS 单席年费</span><i>Accounting SaaS / seat · ~85% GM</i></div>
+  </div>
+  <div class="warn" style="background:var(--ice);border-color:#ddd6fe"><b>增长飞轮 Growth loop：</b>CloudSail 免费采集跑量 → Fideight 在资金流上收费 → 证据与声誉数据沉淀 → 生态壁垒加深。Free capture → monetised settlement → compounding data moat.</div>
+</section>
+
+<section>
+  <h2>壁垒<span class="en">Moats</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3>① 现场入口</h3><div class="en">Field entry point</div><p>眼镜抢占"货在面前的 10 分钟"，手机 App 无法复制。</p><p class="en">The 10 minutes when goods are in front of you — no app can copy it.</p></div>
+    <div class="card"><h3>② 证据网络效应</h3><div class="en">Evidence network effects</div><p>每笔交易沉淀带签名的证据链与验货方声誉，不可移植。</p><p class="en">Signed evidence chains and inspector reputation are non-portable.</p></div>
+    <div class="card"><h3>③ 合规拦截即卖点</h3><div class="en">Compliance as a feature</div><p>被协议挡下的高风险交易链上留痕，是最强的资方/监管信任状。</p><p class="en">Blocked deals leave an onchain record — the credential for regulators and funders.</p></div>
+    <div class="card"><h3>④ 确定性内核</h3><div class="en">Deterministic core</div><p>金额全部走公式引擎，AI 只做理解——企业敢用。</p><p class="en">Numbers come from formula engines, not LLM guesses — enterprises trust it.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>路线图与融资<span class="en">Roadmap & the ask</span></h2>
+  <div class="layer"><b>M0 · 今天<span class="en">Today</span></b><div><p>Sepolia Demo 闭环：EAS + 托管合约已就绪（可现场演示）</p><p class="en">Closed loop on Sepolia: EAS + escrow ready, demo live</p></div></div>
+  <div class="layer"><b>M1 · 0–6 月<span class="en">0–6 mo</span></b><div><p>3 笔真实托管交易走通全流程；CloudSail 3 家展会试点</p><p class="en">3 real escrowed trades end-to-end; 3 CloudSail pilots</p></div></div>
+  <div class="layer"><b>M2 · 6–12 月<span class="en">6–12 mo</span></b><div><p>主网 + USDC；验货市场 20 人内测；合规 Oracle 上线</p><p class="en">Mainnet + USDC; 20-inspector beta; compliance oracle live</p></div></div>
+  <div class="layer"><b>M3 · 12–24 月<span class="en">12–24 mo</span></b><div><p>发票 Token 化贴现；Nym/PIR 隐私层全量；开源 SDK</p><p class="en">Invoice tokenisation; full Nym/PIR; open SDK</p></div></div>
+  <div class="warn"><b>融资条款私聊 The ask, in private：</b>融资规模与资金用途不对外公开，请通过<a href="contact.html">联系页</a>索取投资人版 BP。Funding size & use of funds are shared via the investor deck on request — <a href="contact.html">contact us</a>.</div>
+</section>
+
+<section>
+  <h2>团队<span class="en">Team</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3>Qianru（Carol Qianru Huang）</h3><div class="en">Project Creator</div><p>一线外贸场景、云帆出海 / Fluxa 渠道运营，产品与合规设计。</p><p class="en">Front-line trade operations, CloudSail/Fluxa channels, product & compliance.</p></div>
+    <div class="card"><h3>招募中 Hiring</h3><div class="en">Open roles</div><p>Solidity 工程师 ×1 · CloudSail AIUI 工程师 ×1 · 验货渠道合伙人 ×1</p><p class="en">1 Solidity engineer · 1 AIUI engineer · 1 inspection-channel partner</p></div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="fgrid">
+    <div><div class="fbrand">CloudSail<b style="color:var(--gold)">·</b>Fideight</div><p style="color:#6E7887;font-size:13px">AI 全托管出海系统。工厂只需要发货。</p></div>
+    <div><h4>产品</h4><ul><li><a href="index.html">首页</a></li><li><a href="product.html">产品全景</a></li><li><a href="cockpit.html">驾驶舱</a></li><li><a href="tech.html">技术架构</a></li></ul></div>
+    <div><h4>内容</h4><ul><li><a href="articles.html">专栏</a></li><li><a href="articles/markov-chain-fulfillment.html">九态履约模型</a></li></ul></div>
+    <div><h4>联系</h4><ul><li><a href="contact.html">预约演示</a></li><li><a href="ru.html">Оплата комиссии</a></li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2026 CloudSail · 浙江青釉轩雅服饰有限公司</span><span>Trust, shipped.</span></div>
+</footer>
+<script src="assets/i18n.js"></script>
+</body></html>

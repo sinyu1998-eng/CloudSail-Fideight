@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CloudSail · AI 全托管出海 —— 工厂只需要发货</title>
+<meta name="description" content="云帆出海 CloudSail：外贸业务的 AI 全托管系统。客户开发、建档报价、多语翻译、跟单催收、验货排期、物流追踪全自动，工厂只需要发货。">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+
+<header class="site">
+  <a class="logo" href="index.html"><span class="mark">◈</span>CloudSail<b>·</b>Fideight</a>
+  <nav>
+    <a class="on" href="index.html">首页</a>
+    <a href="product.html">产品</a>
+    <a href="cockpit.html">驾驶舱</a>
+    <a href="articles.html">专栏</a>
+    <a href="ru.html">RU 佣金</a>
+    <a href="contact.html">联系</a>
+    <a href="contact.html" class="btn-nav">预约演示</a>
+    <a class="langswitch" href="javascript:void(0)" onclick="toggleLang()" id="langToggle">中 / EN</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">AI-Native Export Operations</div>
+  <h1>让外贸<em>全托管</em><br>工厂只管发货</h1>
+  <div class="herosub">CloudSail 接管外贸业务的全流程：客户开发、建档报价、多语翻译、跟单催收、验货排期、物流追踪。你只需要做两件事——拍板，和发货。<span class="en">CloudSail runs your entire export operation. You decide, and you ship.</span></div>
+  <p>底层的 Fideight 安全层负责钱与信：验货现场证据上链，货款进里程碑托管，凭证据自动放款。对工厂完全透明，只在钱要动的时候亮出来。<span class="en"><br>Underneath, Fideight handles money and trust: on-site evidence attested onchain, funds escrowed by milestone, released on proof.</span></p>
+  <div class="btns">
+    <a class="btn gold" href="product.html">看产品全景 →</a>
+    <a class="btn ghost" href="cockpit.html">接入你的店铺</a>
+  </div>
+  <div class="herostats">
+    <div><b>9</b><span>履约状态全链可追踪</span></div>
+    <div><b>15</b><span>语种实时翻译</span></div>
+    <div><b>3 min</b><span>争议证据包送达</span></div>
+    <div><b>1</b><span>工厂唯一动作：发货</span></div>
+  </div>
+</div>
+
+<!-- 01 问题 -->
+<section>
+  <div class="secno">01 — The Problem</div>
+  <h2>外贸最难的不是找客户<br>是"证明"<span class="en">The hardest part isn't selling — it's proving</span></h2>
+  <p class="lede">一张订单背后有 80 张照片、3 个群、2 套表格。客户一句"我没法向我老板证明"，就能让一票货卡住三周。</p>
+  <div class="grid g3">
+    <div class="card"><span class="num">01</span><h3>证据散落</h3><div class="en">Evidence, scattered</div><p>照片在手机、单据在邮件、承诺在微信。真出事时，谁也拼不出完整时间线。</p><p class="en">Photos on phones, documents in mail, promises in chat.</p></div>
+    <div class="card"><span class="num">02</span><h3>人盯不动</h3><div class="en">Humans can't scale</div><p>一个业务员扛 30 个客户就到顶。催款、报价、翻译、跟进全靠记性。</p><p class="en">One rep caps out at ~30 accounts on memory alone.</p></div>
+    <div class="card"><span class="num">03</span><h3>钱在赌人品</h3><div class="en">Money bets on trust</div><p>要么先款后货，要么先货后款。总有一方在赌对方不会反悔。</p><p class="en">Prepay or postpay — someone always gambles.</p></div>
+  </div>
+</section>
+
+<!-- 02 方案 -->
+<section class="alt">
+  <div class="secno">02 — The Solution</div>
+  <h2>一套系统，接管整条链路<span class="en">One system, end to end</span></h2>
+  <p class="lede">CloudSail 是主机，Fideight 是底下的安全层。工厂视角里，只有一个动作：发货。</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="num">HOST</span>
+      <h3>CloudSail · AI 全托管</h3>
+      <div class="en">The operating system</div>
+      <p>业务员戴 AI 眼镜说一句话，AI 接管后续全部：客户档案自动建档、三档报价确定性计算、15 国语种实时翻译、跟单催收定时执行、验货自动排期、物流状态自动追踪。</p>
+      <p class="en">One sentence in the field and the system takes over: profiles, deterministic quotes, live translation, follow-ups, inspection scheduling, tracking.</p>
+    </div>
+    <div class="card">
+      <span class="num">SECURITY</span>
+      <h3>Fideight · 安全层</h3>
+      <div class="en">The trust and money layer</div>
+      <p>证据原文存 IPFS/Arweave，链上只留 32 字节哈希；货款进里程碑托管合约，验货通过自动放款；争议三分钟送达 Kleros 仲裁。</p>
+      <p class="en">Payloads off-chain, hashes on-chain; milestone escrow releases on attested proof; disputes reach arbitration in minutes.</p>
+    </div>
+  </div>
+  <div class="warn"><b>一条红线：</b>所有涉及资金的数字都走确定性公式引擎。AI 只负责看懂单据和聊天，不负责决定钱。<b>账本不能猜。</b></div>
+</section>
+
+<!-- 03 流水线 -->
+<section>
+  <div class="secno">03 — How It Runs</div>
+  <h2>从询盘到收款，AI 全程在场<span class="en">From inquiry to payout</span></h2>
+  <div class="flow">
+    <div class="step"><b>01</b><strong>询盘进来</strong><span class="en">Inquiry</span></div>
+    <div class="step"><b>02</b><strong>建档报价</strong><span class="en">Profile & quote</span></div>
+    <div class="step"><b>03</b><strong>合规预检</strong><span class="en">Compliance</span></div>
+    <div class="step"><b>04</b><strong>货款托管</strong><span class="en">Escrow</span></div>
+    <div class="step"><b>05</b><strong>眼镜验货</strong><span class="en">Inspect</span></div>
+    <div class="step"><b>06</b><strong>证据上链</strong><span class="en">Attest</span></div>
+    <div class="step"><b>07</b><strong>发货签收</strong><span class="en">Ship</span></div>
+    <div class="step"><b>08</b><strong>自动结算</strong><span class="en">Settle</span></div>
+  </div>
+  <p class="lede" style="margin-top:34px">每一步都留下可验证的痕迹。任何争议，证据包三分钟内送达仲裁庭。<b>八个步骤里，人只出现在第三步的拍板和第五步的现场。</b></p>
+</section>
+
+<!-- 04 工厂 -->
+<section class="sand">
+  <div class="secno">04 — For The Factory</div>
+  <h2>工厂只需要做三件事<span class="en">Three moves, that's all</span></h2>
+  <div class="grid g3">
+    <div class="card"><span class="num">01</span><h3>发货</h3><div class="en">Ship</div><p>订单、报价、合同、翻译都已经处理完，你拿到的是确定的生产指令。</p><p class="en">Orders, quotes, contracts and translation are done. You get a firm production order.</p></div>
+    <div class="card"><span class="num">02</span><h3>配合验货</h3><div class="en">Open the door</div><p>验货方戴 AI 眼镜上门，开箱点数自动留证。证据即信用，验完就是放款凭证。</p><p class="en">A staked inspector captures on-site. The evidence itself becomes the release voucher.</p></div>
+    <div class="card"><span class="num">03</span><h3>收款</h3><div class="en">Get paid</div><p>货款在托管里，验货通过自动放款。不用追、不用赌人品。</p><p class="en">Funds release automatically on attested milestones. No chasing, no gambling.</p></div>
+  </div>
+</section>
+
+<!-- 05 可信 -->
+<section class="alt">
+  <div class="secno">05 — Trust By Design</div>
+  <h2>四道闸，守住钱和信<span class="en">Four gates</span></h2>
+  <div class="grid g4">
+    <div class="card"><span class="num">01</span><h3>存证</h3><div class="en">Attestation</div><p>原文存 IPFS/Arweave，链上只存哈希。可验证、极便宜、永不过期。</p></div>
+    <div class="card"><span class="num">02</span><h3>托管</h3><div class="en">Escrow</div><p>USDC 按里程碑锁放，证据到、自动放款，平台不经手货款。</p></div>
+    <div class="card"><span class="num">03</span><h3>合规</h3><div class="en">Compliance</div><p>禁运与制裁规则在钱动之前拦截，风险交易留痕可查。</p></div>
+    <div class="card"><span class="num">04</span><h3>仲裁</h3><div class="en">Arbitration</div><p>争议走 Kleros 陪审团，证据包现成，平台不当裁判。</p></div>
+  </div>
+</section>
+
+<!-- 06 谁在用 -->
+<section>
+  <div class="secno">06 — Who It's For</div>
+  <h2>三种人，一个系统<span class="en">Three roles</span></h2>
+  <div class="grid g3">
+    <div class="card"><h3>外贸工厂</h3><div class="en">Factories</div><p>没团队做海外，或者团队只能顾得上一个大客户。你把生产做好，渠道和信任交给我们。</p><p class="en">No overseas team, or one that only covers a single account.</p></div>
+    <div class="card"><h3>贸易公司</h3><div class="en">Trading companies</div><p>客户多、单据杂、催款累。让 AI 接管重复动作，业务员专注关系与谈判。</p><p class="en">Many clients, messy paperwork, endless chasing. Let AI take the repetition.</p></div>
+    <div class="card"><h3>跨境卖家</h3><div class="en">Cross-border sellers</div><p>Shopify / Amazon / 独立站的订单直接接入，履约与证据一体管理。</p><p class="en">Shopify, Amazon and DTC orders flow in with fulfillment and evidence in one place.</p></div>
+  </div>
+  <div class="warn"><b>内测名额：</b>首批 10 家试点，优先 Shopify / CSV 接入。我们会帮你配好店铺连接，看一票货怎么从"说不清"变成"可验证"。<a href="contact.html" style="color:var(--gold)">申请试点 →</a></div>
+</section>
+
+<!-- 07 CTA -->
+<section class="alt" style="text-align:center">
+  <div class="secno" style="justify-content:center">07 — Start</div>
+  <h2 style="max-width:800px;margin:0 auto">先把一票货跑通<br>再谈规模<span class="en">One shipment first. Then scale.</span></h2>
+  <p class="lede" style="margin:24px auto 0;text-align:center">带上你最近一票卡住的货，我们用 30 分钟演示它怎么被逐步证明。</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn gold" href="contact.html">预约 30 分钟演示</a>
+    <a class="btn ghost" href="product.html">先看产品细节</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="fgrid">
+    <div>
+      <div class="fbrand">CloudSail<b style="color:var(--gold)">·</b>Fideight</div>
+      <p style="color:#6E7887;font-size:13px;max-width:300px">AI 全托管出海系统。<br>工厂只需要发货。</p>
+    </div>
+    <div><h4>产品</h4><ul>
+      <li><a href="product.html">产品全景</a></li>
+      <li><a href="cockpit.html">驾驶舱</a></li>
+      <li><a href="tech.html">技术架构</a></li>
+    </ul></div>
+    <div><h4>内容</h4><ul>
+      <li><a href="articles.html">专栏</a></li>
+      <li><a href="articles/markov-chain-fulfillment.html">九态履约模型</a></li>
+    </ul></div>
+    <div><h4>联系</h4><ul>
+      <li><a href="contact.html">预约演示</a></li>
+      <li><a href="ru.html">Оплата комиссии</a></li>
+    </ul></div>
+  </div>
+  <div class="fbot"><span>© 2026 CloudSail · 浙江青釉轩雅服饰有限公司</span><span>Trust, shipped.</span></div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+</body></html>
