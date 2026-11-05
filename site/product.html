@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>产品全景 · CloudSail</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+
+<header class="site">
+  <a class="logo" href="index.html"><span class="mark">◈</span>CloudSail<b>·</b>Fideight</a>
+  <nav>
+    <a href="index.html">首页</a>
+    <a class="on" href="product.html">产品</a>
+    <a href="cockpit.html">驾驶舱</a>
+    <a href="articles.html">专栏</a>
+    <a href="ru.html">RU 佣金</a>
+    <a href="contact.html">联系</a>
+    <a href="contact.html" class="btn-nav">预约演示</a>
+    <a class="langswitch" href="javascript:void(0)" onclick="toggleLang()" id="langToggle">中 / EN</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Product Overview</div>
+  <h1>产品全景</h1>
+  <div class="herosub">AI 全托管出海，底下压着一层安全协议。<span class="en">AI-hosted export, with a security protocol underneath.</span></div>
+  <p>一页讲清楚：系统怎么运转、模块怎么拼、工厂要做几件事、钱怎么被守住。</p>
+</div>
+
+<section class="toc" style="padding-top:34px;padding-bottom:34px">
+  <a href="#p1">01 四层流水线</a><a href="#p2">02 八大模块</a><a href="#p3">03 工厂三件事</a><a href="#p4">04 核心公式</a><a href="#p5">05 安全层</a><a href="#p6">06 一票货的旅程</a>
+</section>
+
+<section id="p1">
+  <div class="secno">01 — Pipeline</div>
+  <h2>四层流水线<span class="en">Four layers, one pipeline</span></h2>
+  <div class="grid g4">
+    <div class="card"><span class="num">L0</span><h3>感知</h3><div class="en">Perception</div><p>AI 眼镜现场采集、店铺订单、邮件聊天多源汇入。机器先看，人再判断。</p></div>
+    <div class="card"><span class="num">L1</span><h3>决策</h3><div class="en">Decision</div><p>LLM 读单据、读聊天、读证据并给出建议；资金计算全部交给确定性公式引擎。</p></div>
+    <div class="card"><span class="num">L2</span><h3>执行</h3><div class="en">Execution</div><p>建档、报价、翻译、跟单、催收、验货排期、物流追踪，自动流转。</p></div>
+    <div class="card"><span class="num">L3</span><h3>结算</h3><div class="en">Settlement</div><p>发货即触发安全层：证据上链、托管放款、佣金分账。</p></div>
+  </div>
+  <div class="warn"><b>一句话：</b>业务员只剩拍板和见客户，工厂只剩发货。</div>
+</section>
+
+<section class="alt" id="p2">
+  <div class="secno">02 — Modules</div>
+  <h2>八个模块，拼出一笔完整交易<span class="en">Eight modules</span></h2>
+  <div class="grid g4">
+    <div class="card"><span class="num">01</span><h3>现场采集</h3><div class="en">Field capture</div><p>眼镜拍摄、OCR 单据、语音速记。</p></div>
+    <div class="card"><span class="num">02</span><h3>证据归档</h3><div class="en">Archive</div><p>IPFS/Arweave 存储 + sha256 指纹。</p></div>
+    <div class="card"><span class="num">03</span><h3>链上存证</h3><div class="en">Attestation</div><p>哈希写入 EAS，任何人可验证。</p></div>
+    <div class="card"><span class="num">04</span><h3>里程碑托管</h3><div class="en">Escrow</div><p>USDC 分段锁放，公式引擎定价。</p></div>
+    <div class="card"><span class="num">05</span><h3>合规检查</h3><div class="en">Compliance</div><p>国家 × 品类规则预检，MCP 工具化。</p></div>
+    <div class="card"><span class="num">06</span><h3>仲裁通道</h3><div class="en">Arbitration</div><p>Kleros 陪审团 + 现成证据包。</p></div>
+    <div class="card"><span class="num">07</span><h3>店铺接入</h3><div class="en">Connectors</div><p>Shopify / Amazon / CSV 订单归一化。</p></div>
+    <div class="card"><span class="num">08</span><h3>收款结算</h3><div class="en">Payments</div><p>法币 + USDC 双轨，佣金自动分账。</p></div>
+  </div>
+</section>
+
+<section class="sand" id="p3">
+  <div class="secno">03 — Factory</div>
+  <h2>工厂只需要做三件事<span class="en">Ship, open the door, get paid</span></h2>
+  <div class="grid g3">
+    <div class="card"><span class="num">01</span><h3>发货</h3><div class="en">Ship</div><p>拿到确定的生产指令，做好货，发出去。</p></div>
+    <div class="card"><span class="num">02</span><h3>配合验货</h3><div class="en">Open the door</div><p>验货方戴眼镜上门，开箱点数自动留证。</p></div>
+    <div class="card"><span class="num">03</span><h3>收款</h3><div class="en">Get paid</div><p>验货通过，托管自动放款，不用追账。</p></div>
+  </div>
+</section>
+
+<section id="p4">
+  <div class="secno">04 — Formulas</div>
+  <h2>钱的计算，不让模型猜<span class="en">Deterministic money math</span></h2>
+  <table class="table">
+    <tr><th>公式</th><th>含义</th></tr>
+    <tr><td><code>release_i = amount × w_i</code></td><td>第 i 个里程碑放款 = 货款 × 权重（0.3 / 0.4 / 0.3）</td></tr>
+    <tr><td><code>fee = amount × rate</code></td><td>协议费随规模递减，0.3%–0.8%</td></tr>
+    <tr><td><code>commission = net GMV × rate</code></td><td>佣金按净成交额计提，退款自动扣减</td></tr>
+    <tr><td><code>evidence_ok = sha256(file) = onchain.hash</code></td><td>证据验证：本地哈希对比链上哈希</td></tr>
+  </table>
+  <div class="warn"><b>为什么坚持这条线：</b>LLM 会算错、会被诱导。钱一旦交给概率模型，纠纷时没人能复现结论。所以我们把所有金额计算锁进确定性引擎，模型只做理解。</div>
+</section>
+
+<section class="alt" id="p5">
+  <div class="secno">05 — Security Layer</div>
+  <h2>Fideight：四道闸<span class="en">Four gates for money and trust</span></h2>
+  <p class="lede">对工厂完全透明。只在钱要动的那一刻亮出来。</p>
+  <div class="grid g4">
+    <div class="card"><span class="num">01</span><h3>存证</h3><div class="en">Attestation</div><p>原文上 IPFS/Arweave，链上只存 32 字节哈希，可验证且永不过期。</p></div>
+    <div class="card"><span class="num">02</span><h3>托管</h3><div class="en">Escrow</div><p>USDC 按里程碑锁放，平台不碰货款，只收协议费。</p></div>
+    <div class="card"><span class="num">03</span><h3>合规</h3><div class="en">Compliance</div><p>禁运与制裁规则在资金动作前拦截，风险交易留痕。</p></div>
+    <div class="card"><span class="num">04</span><h3>仲裁</h3><div class="en">Arbitration</div><p>Kleros 陪审团裁决，证据包三分钟送达。</p></div>
+  </div>
+</section>
+
+<section id="p6">
+  <div class="secno">06 — The Journey</div>
+  <h2>一票货的完整旅程<span class="en">One shipment, end to end</span></h2>
+  <div class="flowline" style="margin-top:34px">
+    <b>下单</b><span>→</span><b>合规预检</b><span>→</span><b>30% 托管</b><span>→</span><b>眼镜验货</b><span>→</span><b>EAS 存证</b><span>→</span><b>40% 放行</b><span>→</span><b>签收</b><span>→</span><b>30% 结清</b>
+  </div>
+  <p class="lede" style="margin-top:30px">每一步都留下可验证的痕迹。任何争议，证据包三分钟内送达仲裁庭。</p>
+  <div class="btns" style="margin-top:36px">
+    <a class="btn gold" href="cockpit.html">去看驾驶舱 →</a>
+    <a class="btn" href="articles/markov-chain-fulfillment.html">读九态履约模型</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="fgrid">
+    <div><div class="fbrand">CloudSail<b style="color:var(--gold)">·</b>Fideight</div><p style="color:#6E7887;font-size:13px">AI 全托管出海系统。</p></div>
+    <div><h4>产品</h4><ul><li><a href="index.html">首页</a></li><li><a href="cockpit.html">驾驶舱</a></li><li><a href="tech.html">技术架构</a></li></ul></div>
+    <div><h4>内容</h4><ul><li><a href="articles.html">专栏</a></li></ul></div>
+    <div><h4>联系</h4><ul><li><a href="contact.html">预约演示</a></li><li><a href="ru.html">RU 佣金</a></li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2026 CloudSail</span><span>Trust, shipped.</span></div>
+</footer>
+<script src="assets/i18n.js"></script>
+</body></html>

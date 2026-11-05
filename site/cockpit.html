@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CloudSail 驾驶舱 Cockpit · CloudSail × Fideight</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .term{background:#1b1630;color:#d8f0d8;border-radius:12px;padding:18px 22px;font-family:monospace;font-size:13.5px;line-height:1.8;overflow-x:auto}
+  .term .c{color:#8a80b0}
+  .stat{display:inline-block;background:#fff;border:1px solid #e2d9c8;border-radius:12px;padding:14px 22px;margin:6px;text-align:center}
+  .stat b{display:block;font-size:26px;color:var(--purple)}
+  .stat span{font-size:12px;opacity:.65}
+  .badge{display:inline-block;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:700}
+  .b-ok{background:#e3f4e3;color:#2c7a2c}.b-run{background:#fdf0d0;color:#8a6d00}.b-soon{background:#eee;color:#777}
+</style></head>
+<body>
+<header class="site">
+  <a class="logo" href="index.html"><span class="mark">◈</span>CloudSail<b>·</b>Fideight</a>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="product.html">产品</a>
+    <a href="cockpit.html">驾驶舱</a>
+    <a href="articles.html">专栏</a>
+    <a href="ru.html">RU 佣金</a>
+    <a href="contact.html">联系</a>
+    <a href="contact.html" class="btn-nav">预约演示</a>
+    <a class="langswitch" href="javascript:void(0)" onclick="toggleLang()" id="langToggle">中 / EN</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>CloudSail 驾驶舱</h1>
+  <div class="en herosub">Cockpit — plug in your store, watch trust flow</div>
+  <p>不是演示图，是<b>真的能接店铺数据</b>的后端骨架：连接器（Shopify / Amazon / CSV）→ 归一化订单流 → 存证与托管状态机 → MCP 工具层，像 DeepSeek Harness 一样"一切皆插件"。</p>
+  <p class="en">A real backend skeleton, not a mockup: connectors (Shopify / Amazon / CSV) → normalized order stream → attestation & escrow state machine → MCP tool layer. Everything is a plugin.</p>
+</div>
+
+<section>
+  <h2>当前状态<span class="en">Status</span></h2>
+  <p>
+    <span class="badge b-ok">已可用 Live</span> CSV 连接器 · 订单归一化 · 佣金公式引擎 · MCP 服务（3 工具）<br>
+    <span class="badge b-run">内测中 Beta</span> Shopify 连接器 · 存证归档脚本（IPFS/Arweave）· 合规 Oracle 规则包<br>
+    <span class="badge b-soon">排期中 Planned</span> Amazon SP-API · 实时马尔可夫转移矩阵面板 · Kleros 仲裁直连
+  </p>
+  <p class="en">Live: CSV connector, order normalization, commission engine, MCP server (3 tools). Beta: Shopify connector, IPFS/Arweave archiving, compliance rulepacks. Planned: Amazon SP-API, live Markov matrix panel, Kleros integration.</p>
+</section>
+
+<section>
+  <h2>三分钟接入<span class="en">Connect in three minutes</span></h2>
+  <div class="term">
+<span class="c"># 1. 克隆仓库 clone</span><br>
+git clone https://github.com/sinyu1998-eng/CloudSail-Fideight<br>
+<br>
+<span class="c"># 2. 配置店铺凭证（复制模板后填自己的）configure credentials</span><br>
+cp cloudsail-connectors/config.example.yaml config.yaml<br>
+<br>
+<span class="c"># 3. 跑通一笔：拉订单 → 归一化 → 算佣金 → 存证归档 dry-run one order</span><br>
+python -m cloudsail_connectors sync --source csv --sample<br>
+node scripts/evidence-archive.js --mode mock --ref PO-2025-001 --item "LED lamps" --qty 500<br>
+node mcp/fideight-mcp.js   <span class="c"># MCP stdio：evidence.verify / escrow.create / compliance.check</span>
+  </div>
+</section>
+
+<section>
+  <h2>架构：一切皆插件<span class="en">Architecture — everything is a plugin</span></h2>
+  <div class="grid g3">
+    <div class="card"><h3>连接器层</h3><div class="en">Connectors</div>
+      <p>每个平台一个插件，统一吐出归一化 Order（买家/金额/币种/SKU/里程碑）。新增平台 = 新增一个文件。</p>
+      <p class="en">One plugin per platform emitting normalized Orders. New platform = one new file.</p></div>
+    <div class="card"><h3>状态机层</h3><div class="en">State machine</div>
+      <p>九态履约状态机（见<a href="articles/markov-chain-fulfillment.html">专栏首篇</a>），每次转移触发存证与放款事件。</p>
+      <p class="en">Nine-state fulfillment machine; every transition emits attestation and release events.</p></div>
+    <div class="card"><h3>工具层</h3><div class="en">MCP tools</div>
+      <p>所有能力暴露为 MCP 工具，任何兼容客户端（含 dsh）可直接调用。LLM 只理解，不碰钱。</p>
+      <p class="en">Every capability is an MCP tool, callable from any compatible client. The LLM understands; it never moves money.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>面板预览（示意数据）<span class="en">Panel preview (sample data)</span></h2>
+  <div>
+    <div class="stat"><b>1,284</b><span>归一化订单 Orders</span></div>
+    <div class="stat"><b>$2.41M</b><span>托管 GMV Escrowed</span></div>
+    <div class="stat"><b>312</b><span>链上存证 Attestations</span></div>
+    <div class="stat"><b>1.9%</b><span>坏账率 Default (S9)</span></div>
+    <div class="stat"><b>3 min</b><span>争议证据包 SLA</span></div>
+  </div>
+  <p style="font-size:13px;opacity:.65">以上为示意数据。接入真实店铺后，此面板由连接器实时驱动。Sample numbers — the panel is driven by live connectors once your store is connected.</p>
+</section>
+
+<section>
+  <h2>申请接入<span class="en">Get connected</span></h2>
+  <p>首批开放 10 个试点席位（Shopify / CSV 优先）。告诉我们你的平台与月订单量，我们帮你配好 config.yaml。<span class="en">First 10 pilot seats (Shopify / CSV first). Tell us your platform and monthly order volume.</span></p>
+  <a class="btn gold" href="contact.html">申请试点 Apply →</a>
+  <a class="btn" href="https://github.com/sinyu1998-eng/CloudSail-Fideight/issues/1" target="_blank" rel="noopener">在 GitHub 跟踪 M1 里程碑 →</a>
+</section>
+
+<footer class="site">
+  <div class="fgrid">
+    <div><div class="fbrand">CloudSail<b style="color:var(--gold)">·</b>Fideight</div><p style="color:#6E7887;font-size:13px">AI 全托管出海系统。工厂只需要发货。</p></div>
+    <div><h4>产品</h4><ul><li><a href="index.html">首页</a></li><li><a href="product.html">产品全景</a></li><li><a href="cockpit.html">驾驶舱</a></li><li><a href="tech.html">技术架构</a></li></ul></div>
+    <div><h4>内容</h4><ul><li><a href="articles.html">专栏</a></li><li><a href="articles/markov-chain-fulfillment.html">九态履约模型</a></li></ul></div>
+    <div><h4>联系</h4><ul><li><a href="contact.html">预约演示</a></li><li><a href="ru.html">Оплата комиссии</a></li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2026 CloudSail · 浙江青釉轩雅服饰有限公司</span><span>Trust, shipped.</span></div>
+</footer>
+<script src="assets/i18n.js"></script>
+</body></html>
